@@ -31,8 +31,9 @@ void RapidFire_float (
     for (float i = 0.; i < count; i++) {
         float t = i / (count - 1.);
 
-        float timeI = frac(time + t);
-        float iterI = floor(time + t);
+        float offset = i / count;
+        float timeI = frac(time + offset);
+        float iterI = floor(time + offset);
 
         float rot = lerp(
             lerp(-angle, angle, t), // fixed angle
@@ -42,7 +43,6 @@ void RapidFire_float (
 
         float2 uvi = rotate(uv, rot);
 
-        // float level = smoothstep(0., 1., timeI);
         float level = smoothstep(decay, 0., timeI);
 
         total += LaserCore(uvi, width, sharpness, xBlur) * level;
