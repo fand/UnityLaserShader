@@ -5,25 +5,46 @@ float2 rotate(float2 uv, float t) {
     return mul(float2x2(c, s, -s, c), uv);
 }
 
+// fake random
+float rand(float t) {
+    return frac(sin(t * 84.) * 498.);
+}
+
 void RapidFire_float (
     float2 uv,
     float width,
     float sharpness,
     float angle,
     float time,
+    float count,
+    float randomness,
+    float decay,
     out float output
 ) {
-    float iter = 5.;
-    float dr = (angle * 2.) / (iter - 1.);
+    float dr = (angle * 2.) / (count - 1.);
+
+    count = floor(count);
+    count = max(count, 2.);
 
     float total;
-    for (float i = 0.; i < iter; i++) {
-        float rot = dr * i - angle;
+    for (float i = 0.; i < count; i++) {
+        float t = i / (count - 1.);
+
+        float timeI = frac(time + t);
+        float iterI = floor(time + t);
+
+        float rot = lerp(
+            lerp(-angle, angle, t), // fixed angle
+            lerp(-angle, angle, rand(t + iterI)), // random angle
+            clamp(randomness, 0., 1.)
+        );
+
         float2 uvi = rotate(uv, rot);
 
-        float t = frac(time + 1. / iter * i);
-        float level = smoothstep(0., 1., t);
-        total += LaserCore(uvi, width, sharpness) * t;
+        // float level = smoothstep(0., 1., timeI);
+        float level = smoothstep(decay, 0., timeI);
+
+        total += LaserCore(uvi, width, sharpness) * level;
     }
 
     output = total;

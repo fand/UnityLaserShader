@@ -198,8 +198,11 @@ Material:
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
     - _Power: 4
-    - _RapidFireCount: 6
-    - _Rapidfiire: 0.24
+    - _RapidFireCount: 7.9
+    - _RapidFireDecay: 0.56
+    - _RapidFireRandomness: 0
+    - _RapidFireSpeed: -1
+    - _Rapidfiire: 1
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
@@ -243,7 +246,7 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _Width: 0.337
+    - _Width: 0.728
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
