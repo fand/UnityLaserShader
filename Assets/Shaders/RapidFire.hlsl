@@ -14,6 +14,7 @@ void RapidFire_float (
     float2 uv,
     float width,
     float sharpness,
+    float xBlur,
     float angle,
     float time,
     float count,
@@ -44,7 +45,7 @@ void RapidFire_float (
         // float level = smoothstep(0., 1., timeI);
         float level = smoothstep(decay, 0., timeI);
 
-        total += LaserCore(uvi, width, sharpness) * level;
+        total += LaserCore(uvi, width, sharpness, xBlur) * level;
     }
 
     output = total;

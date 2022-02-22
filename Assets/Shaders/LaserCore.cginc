@@ -6,8 +6,11 @@
 float LaserCore(
     float2 uv,
     float width,
-    float sharpness
+    float sharpness,
+    float xBlur
 ) {
+    uv.x /= (1. + uv.y * xBlur * 100.);
+
     float c = (width * widthFactor) / abs(uv.x);
     c = clamp(c, 0., 1.);
     c = pow(c, sharpness + 1.);

@@ -135,7 +135,7 @@ Material:
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _Angle: 28.7
+    - _Angle: 38.9
     - _Anisotropy: 0
     - _BlendMode: 1
     - _CoatMask: 0
@@ -186,7 +186,7 @@ Material:
     - _MetallicRemapMin: 0
     - _NeedleBlur: 0.145
     - _NeedleWidth: 0
-    - _NoiseIntensity: 0.763
+    - _NoiseIntensity: 0.408
     - _NoiseScale: 1000
     - _NoiseSpeed: 0.153
     - _NormalMapSpace: 0
@@ -200,15 +200,15 @@ Material:
     - _Power: 4
     - _RapidFireCount: 7.9
     - _RapidFireDecay: 0.56
-    - _RapidFireRandomness: 0
-    - _RapidFireSpeed: -1
+    - _RapidFireRandomness: 0.964
+    - _RapidFireSpeed: 2
     - _Rapidfiire: 1
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 4
-    - _Sharpness: 0.59
+    - _Sharpness: 2.13
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -247,6 +247,7 @@ Material:
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
     - _Width: 0.728
+    - _XBlur: 0.266
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
@@ -254,7 +255,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0, g: 2.9960785, b: 0.65882355, a: 1}
+    - _Color: {r: 0, g: 11.984314, b: 2.6352942, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
