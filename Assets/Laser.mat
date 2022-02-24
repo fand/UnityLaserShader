@@ -138,8 +138,8 @@ Material:
     - _Angle: 20
     - _Anisotropy: 0
     - _BlendMode: 1
-    - _CenterBloom: 6.15
-    - _CenterBloomSize: 0.384
+    - _CenterBloom: 5
+    - _CenterBloomSize: 0.3
     - _CenterFlash: 9.81
     - _CoatMask: 0
     - _ConservativeDepthOffsetEnable: 0
@@ -168,8 +168,8 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
-    - _Fog: 0.032
-    - _FogBlink: 0.147
+    - _Fog: 0.391
+    - _FogBlink: 0.672
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -191,9 +191,9 @@ Material:
     - _MetallicRemapMin: 0
     - _NeedleBlur: 0.145
     - _NeedleWidth: 0
-    - _NoiseIntensity: 0.359
-    - _NoiseScale: 193
-    - _NoiseSpeed: 0.141
+    - _NoiseIntensity: 0.406
+    - _NoiseScale: 200
+    - _NoiseSpeed: 0.2
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _OpaqueCullMode: 2
@@ -203,17 +203,17 @@ Material:
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
     - _Power: 4
-    - _RapidFireCount: 5.1
-    - _RapidFireDecay: 0.609
-    - _RapidFireRandomness: 0.923
-    - _RapidFireSpeed: -5.8
-    - _Rapidfiire: 0
+    - _RapidFireCount: 8
+    - _RapidFireDecay: 0.267
+    - _RapidFireRandomness: 0.676
+    - _RapidFireSpeed: 2
+    - _Rapidfiire: 0.869
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 4
-    - _Sharpness: 0
+    - _Sharpness: 4.11
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -251,8 +251,8 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _Width: 0.115
-    - _XBlur: 0.224
+    - _Width: 0.271
+    - _XBlur: 1
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
