@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7855042991985602186}
   - component: {fileID: 7855042991985602185}
   - component: {fileID: 7855042991985602184}
+  - component: {fileID: 3998283697857651042}
   m_Layer: 0
   m_Name: LaserQuad
   m_TagString: Untagged
@@ -115,6 +116,49 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3998283697857651042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7855042991985602181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739fd46c680c2714298c7ba886b9e2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserProps:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    intensity: 0
+    flickering: 0
+    seed: 0
+    useManualTime: 0
+    manualTime: 0
+    angle: 0
+    width: 0
+    sharpness: 0
+    xBlur: 0
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 0
+    rapidFireCount: 0
+    rapidFireSpeed: 0
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0
+    rapidFireHold: 0
+    rapidFireRelease: 0
+    rapidFireRandomness: 0
+    noiseIntensity: 0
+    noiseScale: 0
+    noiseSpeed: 0
+    fog: 0
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 0
+    strobePWM: 0
+    strobeTimeOffset: 0
+  meshRenderer: {fileID: 7855042991985602184}
 --- !u!1 &7855042992443888144
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7855042992443888145}
+  - component: {fileID: 5304875761666107648}
   m_Layer: 0
   m_Name: PanTiltLaser
   m_TagString: Untagged
@@ -147,6 +192,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5304875761666107648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7855042992443888144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b959cc9bdf1404db56c587c530b274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pan: {fileID: 1790397582027110796}
+  tilt: {fileID: 1079733554024563108}
+  laser: {fileID: 3998283697857651042}
 --- !u!1 &8237201432981812570
 GameObject:
   m_ObjectHideFlags: 0

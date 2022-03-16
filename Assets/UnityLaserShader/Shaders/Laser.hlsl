@@ -5,7 +5,9 @@ void Laser_float (
     float width,
     float sharpness,
     float xBlur,
+    float splitWidth,
+    float splitMix,
     out float output
 ) {
-    output = LaserCore(uv, width, sharpness, xBlur);
+    output = LaserCore(uv, width, sharpness, xBlur, splitWidth, splitMix);
 }

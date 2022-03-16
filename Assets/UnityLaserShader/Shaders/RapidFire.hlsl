@@ -15,11 +15,17 @@ void RapidFire_float (
     float width,
     float sharpness,
     float xBlur,
+    float splitWidth,
+    float splitMix,
     float angle,
     float time,
+    float speed,
     float count,
     float randomness,
-    float decay,
+    float randomSeed,
+    float attack,
+    float hold,
+    float release,
     out float output
 ) {
     float dr = (angle * 2.) / (count - 1.);
@@ -37,15 +43,15 @@ void RapidFire_float (
 
         float rot = lerp(
             lerp(-angle, angle, t), // fixed angle
-            lerp(-angle, angle, rand(t + iterI)), // random angle
+            lerp(-angle, angle, rand(t + iterI + randomSeed)), // random angle
             clamp(randomness, 0., 1.)
         );
 
         float2 uvi = rotate(uv, rot);
 
-        float level = smoothstep(decay, 0., timeI);
+        float level = speed == 0.0 ? 1.0 : smoothstep(0., attack, timeI) * smoothstep(hold + release, hold, timeI);
 
-        total += LaserCore(uvi, width, sharpness, xBlur) * level;
+        total += LaserCore(uvi, width, sharpness, xBlur, splitWidth, splitMix) * level;
     }
 
     output = total;
