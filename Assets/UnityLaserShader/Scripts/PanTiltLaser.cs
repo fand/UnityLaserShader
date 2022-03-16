@@ -5,9 +5,7 @@ using UnityEngine;
 public class PanTiltLaser : MonoBehaviour
 {
     [SerializeField] private Transform pan;
-
     [SerializeField] private Transform tilt;
-
     [SerializeField] private LaserQuad laser;
 
     public void SetLaserProps(LaserProps laserProps)
@@ -17,7 +15,6 @@ public class PanTiltLaser : MonoBehaviour
 
     public void SetPan(float pan)
     {
-        Debug.Log(">> SetPan" + pan);
         this.pan.localEulerAngles = Vector3.up * pan;
     }
 

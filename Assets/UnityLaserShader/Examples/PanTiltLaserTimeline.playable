@@ -1,0 +1,812 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8768144980472406684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c157651257c38cb4687986777f8a4d3d, type: 3}
+  m_Name: PanTiltLaserTimelineClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  laserProps:
+    pan: 0
+    tilt: 0
+    color: {r: 0, g: 2.828427, b: 0, a: 1}
+    intensity: 0
+    flickering: 0
+    seed: 0
+    manualTime: 0
+    angle: 0
+    width: 0.5
+    sharpness: 0.1
+    xBlur: 0.01
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 0
+    rapidFireCount: 0
+    rapidFireSpeed: 0
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0
+    rapidFireHold: 0
+    rapidFireRelease: 0
+    rapidFireRandomness: 0
+    noiseIntensity: 0
+    noiseScale: 1
+    noiseSpeed: 0
+    fog: 0
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 0
+    strobePWM: 0.5
+    strobeTimeOffset: 0
+--- !u!114 &-6474742994283073038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c157651257c38cb4687986777f8a4d3d, type: 3}
+  m_Name: PanTiltLaserTimelineClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  laserProps:
+    pan: 0
+    tilt: 0
+    color: {r: 0, g: 1, b: 0, a: 1}
+    intensity: 0
+    flickering: 0
+    seed: 0
+    manualTime: 0
+    angle: 0
+    width: 0.977
+    sharpness: 3.11
+    xBlur: 0.152
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 1
+    rapidFireCount: 5
+    rapidFireSpeed: 3
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0.3
+    rapidFireHold: 0.4
+    rapidFireRelease: 0.3
+    rapidFireRandomness: 0
+    noiseIntensity: 0
+    noiseScale: 1
+    noiseSpeed: 0
+    fog: 0
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 0
+    strobePWM: 0.5
+    strobeTimeOffset: 0
+--- !u!114 &-1552527007619657334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c157651257c38cb4687986777f8a4d3d, type: 3}
+  m_Name: PanTiltLaserTimelineClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  laserProps:
+    pan: 0
+    tilt: 0
+    color: {r: 0, g: 2.8481674, b: 3.9999995, a: 1}
+    intensity: 1
+    flickering: 0
+    seed: 0
+    manualTime: 0
+    angle: 40
+    width: 0.5
+    sharpness: 0.1
+    xBlur: 0.01
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 1
+    rapidFireCount: 5
+    rapidFireSpeed: 3
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0
+    rapidFireHold: 0.6
+    rapidFireRelease: 0.3
+    rapidFireRandomness: 1
+    noiseIntensity: 0
+    noiseScale: 1
+    noiseSpeed: 0
+    fog: 0
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 0
+    strobePWM: 0.5
+    strobeTimeOffset: 0
+--- !u!114 &-863320949381071516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c1ec441d2569d4dbe864237fe8c03e, type: 3}
+  m_Name: Pan Tilt Laser Timeline Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: -8768144980472406684}
+    m_Duration: 0.5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -863320949381071516}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 0.5
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: PanTiltLaserTimelineClip
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: -805234036936975955}
+    m_Duration: 1.5166666666666662
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -863320949381071516}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.5
+    m_BlendOutDuration: 0.499999999999998
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: PanTiltLaserTimelineClip
+  - m_Version: 1
+    m_Start: 1.0166666666666682
+    m_ClipIn: 0
+    m_Asset: {fileID: 7614451625173363038}
+    m_Duration: 1.7500000000000009
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -863320949381071516}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.499999999999998
+    m_BlendOutDuration: 0.5166666666666657
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: PanTiltLaserTimelineClip
+  - m_Version: 1
+    m_Start: 2.2500000000000036
+    m_ClipIn: 0
+    m_Asset: {fileID: 1230444296097135098}
+    m_Duration: 1.3166666666666647
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -863320949381071516}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.5166666666666657
+    m_BlendOutDuration: 0.5666666666666647
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: PanTiltLaserTimelineClip
+  - m_Version: 1
+    m_Start: 3.0000000000000036
+    m_ClipIn: 0
+    m_Asset: {fileID: -1552527007619657334}
+    m_Duration: 1.75
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -863320949381071516}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.5666666666666647
+    m_BlendOutDuration: 0.2500000000000009
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: PanTiltLaserTimelineClip
+  - m_Version: 1
+    m_Start: 4.500000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: 7374999042951080563}
+    m_Duration: 1.916666666666667
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -863320949381071516}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.2500000000000009
+    m_BlendOutDuration: 0.41666666666666696
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: PanTiltLaserTimelineClip
+  - m_Version: 1
+    m_Start: 6.000000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -6474742994283073038}
+    m_Duration: 0.5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -863320949381071516}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.41666666666666696
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 0
+    m_DisplayName: PanTiltLaserTimelineClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-805234036936975955
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c157651257c38cb4687986777f8a4d3d, type: 3}
+  m_Name: PanTiltLaserTimelineClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  laserProps:
+    pan: 0
+    tilt: 0
+    color: {r: 0, g: 2.828427, b: 0, a: 1}
+    intensity: 1
+    flickering: 0
+    seed: 0
+    manualTime: 0
+    angle: 15
+    width: 0.5
+    sharpness: 0.1
+    xBlur: 0.01
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 0
+    rapidFireCount: 0
+    rapidFireSpeed: 0
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0
+    rapidFireHold: 0
+    rapidFireRelease: 0
+    rapidFireRandomness: 0
+    noiseIntensity: 0
+    noiseScale: 1
+    noiseSpeed: 0
+    fog: 0
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 0
+    strobePWM: 0.5
+    strobeTimeOffset: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: PanTiltLaserTimeline
+  m_EditorClassIdentifier: 
+  m_Version: 0
+  m_Tracks:
+  - {fileID: -863320949381071516}
+  m_FixedDuration: 0
+  m_EditorSettings:
+    m_Framerate: 60
+    m_ScenePreview: 1
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: 0}
+--- !u!114 &1230444296097135098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c157651257c38cb4687986777f8a4d3d, type: 3}
+  m_Name: PanTiltLaserTimelineClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  laserProps:
+    pan: 90
+    tilt: 0
+    color: {r: 4, g: 0.078431375, b: 0, a: 1}
+    intensity: 1
+    flickering: 1
+    seed: 0
+    manualTime: 0
+    angle: 15
+    width: 0.5
+    sharpness: 0.1
+    xBlur: 0.01
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 0
+    rapidFireCount: 0
+    rapidFireSpeed: 0
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0
+    rapidFireHold: 0
+    rapidFireRelease: 0
+    rapidFireRandomness: 0
+    noiseIntensity: 0
+    noiseScale: 1
+    noiseSpeed: 0
+    fog: 0.218
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 0
+    strobePWM: 0.5
+    strobeTimeOffset: 0
+--- !u!114 &7374999042951080563
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c157651257c38cb4687986777f8a4d3d, type: 3}
+  m_Name: PanTiltLaserTimelineClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  laserProps:
+    pan: 0
+    tilt: 0
+    color: {r: 0, g: 1, b: 0, a: 1}
+    intensity: 2
+    flickering: 0
+    seed: 0
+    manualTime: 0
+    angle: 15
+    width: 0.977
+    sharpness: 3.11
+    xBlur: 0.152
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 1
+    rapidFireCount: 5
+    rapidFireSpeed: 3
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0.3
+    rapidFireHold: 0.4
+    rapidFireRelease: 0.3
+    rapidFireRandomness: 0
+    noiseIntensity: 0
+    noiseScale: 1
+    noiseSpeed: 0
+    fog: 0
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 0
+    strobePWM: 0.5
+    strobeTimeOffset: 0
+--- !u!114 &7614451625173363038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c157651257c38cb4687986777f8a4d3d, type: 3}
+  m_Name: PanTiltLaserTimelineClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  laserProps:
+    pan: 90
+    tilt: 0
+    color: {r: 4, g: 0.078431375, b: 0, a: 1}
+    intensity: 1
+    flickering: 1
+    seed: 0
+    manualTime: 0
+    angle: 15
+    width: 0.5
+    sharpness: 0.1
+    xBlur: 0.01
+    splitWidth: 0
+    splitMix: 0
+    rapidFire: 0
+    rapidFireCount: 0
+    rapidFireSpeed: 0
+    rapidFireTimeOffset: 0
+    rapidFireAttack: 0
+    rapidFireHold: 0
+    rapidFireRelease: 0
+    rapidFireRandomness: 0
+    noiseIntensity: 0
+    noiseScale: 1
+    noiseSpeed: 0
+    fog: 0.218
+    centerBloom: 0
+    centerBloomSize: 0
+    strobeSpeed: 20
+    strobePWM: 0.5
+    strobeTimeOffset: 0
