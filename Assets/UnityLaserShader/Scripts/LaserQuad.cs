@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteAlways]
+[RequireComponent(typeof(MeshRenderer))]
 public class LaserQuad : MonoBehaviour
 {
     public LaserProps laserProps = new();
@@ -12,6 +14,12 @@ public class LaserQuad : MonoBehaviour
     public void Init()
     {
         materialPropertyBlock = new();
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
+
+    private void Start()
+    {
+        Init();
     }
 
     public void SetProps(LaserProps laserProps)

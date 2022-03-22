@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 566828931447491513}
   - component: {fileID: 566828931447491514}
   - component: {fileID: 566828931447491515}
+  - component: {fileID: 2248136223290325875}
   m_Layer: 0
   m_Name: LaserQuad
   m_TagString: Untagged
@@ -115,3 +116,46 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2248136223290325875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566828931447491510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739fd46c680c2714298c7ba886b9e2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserProps:
+    color: {r: 1, g: 0, b: 0, a: 0}
+    intensity: 1.2
+    flickering: 0.79
+    seed: 15.1
+    useManualTime: 0
+    manualTime: 0
+    angle: 34.7
+    width: 0.178
+    sharpness: 3.69
+    xBlur: 0.407
+    splitWidth: 0.108
+    splitMix: 0.343
+    rapidFire: 0.215
+    rapidFireCount: 22.8
+    rapidFireSpeed: 1.1
+    rapidFireTimeOffset: 0.497
+    rapidFireAttack: 0.444
+    rapidFireHold: 0.465
+    rapidFireRelease: 0.401
+    rapidFireRandomness: 0.401
+    noiseIntensity: 0.401
+    noiseScale: 396
+    noiseSpeed: 0.396
+    fog: 0.396
+    centerBloom: 3.96
+    centerBloomSize: 0.396
+    strobeSpeed: 23.8
+    strobePWM: 0.396
+    strobeTimeOffset: 0.396
+  meshRenderer: {fileID: 566828931447491515}

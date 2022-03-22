@@ -5,11 +5,11 @@ using UnityEngine;
 public class LaserProps
 {
     [SerializeField] public Color color = Color.green;
-    [SerializeField] public float intensity = 1f;
+    [SerializeField, Range(0, 1)] public float intensity = 1f;
     [SerializeField, Range(0, 1)] public float flickering = 0f;
     [SerializeField, Range(0, 100)] public float seed = 0f;
     [SerializeField] public bool useManualTime = false;
-    [SerializeField, Range(0, 1)] public float manualTime = 0f;
+    [SerializeField] public float manualTime = 0f;
     [SerializeField, Range(0, 90)] public float angle = 15f;
     [SerializeField, Range(0, 1)] public float width = 0.5f;
     [SerializeField, Range(0, 10)] public float sharpness = 0.1f;
