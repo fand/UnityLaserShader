@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
+  m_IndirectSpecularColor: {r: 0.12811697, g: 0.15874434, b: 0.2101121, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -622,6 +622,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser
       objectReference: {fileID: 0}
+    - target: {fileID: 566828931389634339, guid: c3665fdd3d138564e9ce0a59d649535c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3665fdd3d138564e9ce0a59d649535c, type: 3}
 --- !u!1001 &1471446466
@@ -644,12 +649,92 @@ PrefabInstance:
     - target: {fileID: 1790397582027110796, guid: 4b0bd6f899293d349af3a21064391c26,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1790397582027110796, guid: 4b0bd6f899293d349af3a21064391c26,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071067
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.fog
+      value: 0.218
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.seed
+      value: 16.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.angle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.xBlur
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.color.g
+      value: 0.078431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.color.r
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.sharpness
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.strobePWM
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.flickering
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.manualTime
+      value: 0.188
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.noiseScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.strobeSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998283697857651042, guid: 4b0bd6f899293d349af3a21064391c26,
+        type: 3}
+      propertyPath: laserProps.useManualTime
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7855042992443888144, guid: 4b0bd6f899293d349af3a21064391c26,
         type: 3}
