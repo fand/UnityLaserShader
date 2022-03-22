@@ -3,7 +3,7 @@
 
 #define widthFactor 0.001
 
-float LaserCore(
+float  LaserCore(
     float2 uv,
     float width,
     float sharpness,

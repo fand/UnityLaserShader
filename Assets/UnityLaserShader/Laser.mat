@@ -29,7 +29,7 @@ Material:
   m_ShaderKeywords: _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
@@ -62,7 +62,7 @@ Material:
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _Angle: 15
+    - _Angle: 29.9
     - _BlendMode: 0
     - _Blink: 0
     - _CenterBloom: 0
@@ -72,27 +72,33 @@ Material:
     - _CullModeForward: 2
     - _DepthOffsetEnable: 0
     - _DoubleSidedEnable: 0
-    - _DoubleSidedGIMode: 0
+    - _DoubleSidedGIMode: 1
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
-    - _Flickering: 0
+    - _Flickering: 0.046
     - _Fog: 0
-    - _Intensity: 1
+    - _Intensity: 0.745
+    - _ManualTime: -2.44
     - _NoiseIntensity: 0
     - _NoiseScale: 500
     - _NoiseSpeed: 0.3
     - _OpaqueCullMode: 2
+    - _RapidFireAttack: 0
     - _RapidFireCount: 5
     - _RapidFireDecay: 0.3
+    - _RapidFireHold: 0.3
     - _RapidFireRandomness: 0
+    - _RapidFireRelease: 0.1
     - _RapidFireSpeed: 1
     - _RapidFireTimeOffset: 0
     - _Rapidfiire: 0
     - _RenderQueueType: 4
-    - _Seed: 0
+    - _Seed: 7.9
     - _Sharpness: 3
+    - _SplitMix: 0
+    - _SplitWidth: 0
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0
@@ -115,15 +121,16 @@ Material:
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
+    - _UseManualTime: 0
     - _UseShadowThreshold: 0
-    - _Width: 0.5
+    - _Width: 0.195
     - _XBlur: 0
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0, g: 1, b: 0, a: 0}
+    - _Color: {r: 7.129739, g: 0, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
