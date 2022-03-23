@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1b02704461af04bbb9596647946b57a5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12811697, g: 0.15874434, b: 0.2101121, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414668, b: 0.12107805, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -625,6 +625,16 @@ PrefabInstance:
     - target: {fileID: 566828931389634339, guid: c3665fdd3d138564e9ce0a59d649535c,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 566828931447491513, guid: c3665fdd3d138564e9ce0a59d649535c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248136223290325875, guid: c3665fdd3d138564e9ce0a59d649535c,
+        type: 3}
+      propertyPath: laserProps.color.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
