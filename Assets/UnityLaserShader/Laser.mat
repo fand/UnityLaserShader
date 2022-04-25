@@ -24,8 +24,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Laser
-  m_Shader: {fileID: -6465566751694194690, guid: 3c9c76df4344d47f4af537be30c19e66,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 3c9c76df4344d47f4af537be30c19e66, type: 3}
   m_ShaderKeywords: _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -41,6 +40,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,7 +64,8 @@ Material:
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _Angle: 29.9
+    - _Angle: 44.3
+    - _BlendFactor: 0.987
     - _BlendMode: 0
     - _Blink: 0
     - _CenterBloom: 0
@@ -69,7 +73,9 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
+    - _DebugFogWidthSlider: 1
     - _DepthOffsetEnable: 0
+    - _DistanceFade: 0.498
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 1
     - _DoubleSidedNormalMode: 2
@@ -77,8 +83,10 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _Flickering: 0.046
-    - _Fog: 0
-    - _Intensity: 0.745
+    - _Fog: 0.63
+    - _FogBlendFactor: 0.172
+    - _FogNoiseScale: 0.43
+    - _Intensity: 0.639
     - _ManualTime: -2.44
     - _NoiseIntensity: 0
     - _NoiseScale: 500
@@ -86,18 +94,19 @@ Material:
     - _OpaqueCullMode: 2
     - _QueueControl: 1
     - _QueueOffset: 0
-    - _RapidFireAttack: 0
+    - _RapidFireAttack: 0.353
     - _RapidFireCount: 5
     - _RapidFireDecay: 0.3
     - _RapidFireHold: 0.3
     - _RapidFireRandomness: 0
     - _RapidFireRelease: 0.1
     - _RapidFireSpeed: 1
-    - _RapidFireTimeOffset: 0
+    - _RapidFireTimeOffset: 0.256
     - _Rapidfiire: 0
     - _RenderQueueType: 4
+    - _Rotation: 0
     - _Seed: 7.9
-    - _Sharpness: 3
+    - _Sharpness: 3.39
     - _SplitMix: 0
     - _SplitWidth: 0
     - _SrcBlend: 1
@@ -112,7 +121,7 @@ Material:
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
     - _StrobePWM: 0.5
-    - _StrobeSpeed: 0
+    - _StrobeSpeed: -30
     - _StrobeTimeOffset: 0
     - _SurfaceType: 1
     - _TransparentBackfaceEnable: 0
@@ -124,16 +133,18 @@ Material:
     - _TransparentZWrite: 0
     - _UseManualTime: 0
     - _UseShadowThreshold: 0
-    - _Width: 0.195
-    - _XBlur: 0
+    - _Width: 0.24
+    - _XBlur: 0.436
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 7.129739, g: 0, b: 0, a: 1}
+    - _Color: {r: 0, g: 1, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FogColor: {r: 0, g: 1, b: 0, a: 1}
+    - _OffsetCenter: {r: 0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1844682872234482842
 MonoBehaviour:

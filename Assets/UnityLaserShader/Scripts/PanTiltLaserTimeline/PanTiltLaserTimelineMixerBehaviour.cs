@@ -40,18 +40,31 @@ public class PanTiltLaserTimelineMixerBehaviour : PlayableBehaviour
                 // trackBinding.UpdateLaser(input.laserProps);
                 pan += input.pan * inputWeight;
                 tilt += input.tilt * inputWeight;
-                laserProps.color += input.color * inputWeight;
-                laserProps.intensity += input.intensity * inputWeight;
-                laserProps.flickering += input.flickering * inputWeight;
-                laserProps.seed += input.seed * inputWeight;
+                
+                laserProps.rotation += input.rotation * inputWeight;
+                laserProps.offsetCenter += input.offsetCenter * inputWeight;
+                
+                // laserProps.color += input.color * inputWeight;
+                // laserProps.fogColor += input.fogColor * inputWeight;
+                // laserProps.intensity += input.intensity * inputWeight;
+            
                 laserProps.useManualTime = true;
                 if (playableDirector != null) laserProps.manualTime = (float)playableDirector.time;
+                
+                
                 laserProps.angle += input.angle * inputWeight;
+                laserProps.flickering += input.flickering * inputWeight;
                 laserProps.width += input.width * inputWeight;
                 laserProps.sharpness += input.sharpness * inputWeight;
                 laserProps.xBlur += input.xBlur * inputWeight;
                 laserProps.splitWidth += input.splitWidth * inputWeight;
                 laserProps.splitMix += input.splitMix * inputWeight;
+                laserProps.fog += input.fog * inputWeight;
+                laserProps.centerBloom += input.centerBloom * inputWeight;
+                laserProps.centerBloomSize += input.centerBloomSize * inputWeight;
+                
+                
+            
                 laserProps.rapidFire += input.rapidFire * inputWeight;
                 laserProps.rapidFireCount += input.rapidFireCount * inputWeight;
                 laserProps.rapidFireSpeed += input.rapidFireSpeed * inputWeight;
@@ -60,12 +73,12 @@ public class PanTiltLaserTimelineMixerBehaviour : PlayableBehaviour
                 laserProps.rapidFireHold += input.rapidFireHold * inputWeight;
                 laserProps.rapidFireRelease += input.rapidFireRelease * inputWeight;
                 laserProps.rapidFireRandomness += input.rapidFireRandomness * inputWeight;
+               
+                laserProps.seed += input.seed * inputWeight;
                 laserProps.noiseIntensity += input.noiseIntensity * inputWeight;
                 laserProps.noiseScale += input.noiseScale * inputWeight;
                 laserProps.noiseSpeed += input.noiseSpeed * inputWeight;
-                laserProps.fog += input.fog * inputWeight;
-                laserProps.centerBloom += input.centerBloom * inputWeight;
-                laserProps.centerBloomSize += input.centerBloomSize * inputWeight;
+               
                 laserProps.strobeSpeed += input.strobeSpeed * inputWeight;
                 laserProps.strobePWM += input.strobePWM * inputWeight;
                 laserProps.strobeTimeOffset += input.strobeTimeOffset * inputWeight;

@@ -36,10 +36,15 @@ public class LaserQuad : MonoBehaviour
             Init();
         }
 
+        transform.localScale = laserProps.size;
+        transform.localPosition = Vector3.up * laserProps.size.y / 2f;
         materialPropertyBlock.SetColor("_Color", laserProps.color);
+        materialPropertyBlock.SetColor("_FogColor", laserProps.fogColor);
         materialPropertyBlock.SetFloat("_Intensity", laserProps.intensity);
         materialPropertyBlock.SetFloat("_Flickering", laserProps.flickering);
         materialPropertyBlock.SetFloat("_Seed", laserProps.seed);
+        materialPropertyBlock.SetVector("_OffsetCenter",laserProps.offsetCenter);
+        materialPropertyBlock.SetFloat("_Rotation", laserProps.rotation);
         materialPropertyBlock.SetInt("_UseManualTime", laserProps.useManualTime ? 1 : 0);
         materialPropertyBlock.SetFloat("_ManualTime", laserProps.manualTime);
         materialPropertyBlock.SetFloat("_Angle", laserProps.angle);

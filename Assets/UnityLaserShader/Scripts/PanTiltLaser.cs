@@ -13,6 +13,8 @@ public class PanTiltLaser : MonoBehaviour
         laser.laserProps = laserProps;
     }
 
+    public LaserQuad laserQuad => laser;
+
     public void SetPan(float pan)
     {
         this.pan.localEulerAngles = Vector3.up * pan;

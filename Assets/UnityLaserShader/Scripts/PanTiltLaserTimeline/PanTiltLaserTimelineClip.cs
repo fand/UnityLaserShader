@@ -15,6 +15,8 @@ public class PanTiltLaserTimelineClip : PlayableAsset, ITimelineClipAsset
 
     public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
     {
-        return ScriptPlayable<PanTiltLaserTimelineBehaviour>.Create(graph, laserProps);
+        var playable =  ScriptPlayable<PanTiltLaserTimelineBehaviour>.Create(graph, laserProps);
+        
+        return playable;
     }
 }

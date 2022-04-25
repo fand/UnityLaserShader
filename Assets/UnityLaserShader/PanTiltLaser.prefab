@@ -28,8 +28,40 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7855042991985602186}
+  - {fileID: 1104407686067459981}
   m_Father: {fileID: 1790397582027110796}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5955660197102358795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104407686067459981}
+  m_Layer: 0
+  m_Name: Rotation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1104407686067459981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955660197102358795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7855042991985602186}
+  m_Father: {fileID: 1079733554024563108}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7855042991985602181
@@ -63,7 +95,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1079733554024563108}
+  m_Father: {fileID: 1104407686067459981}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7855042991985602185
@@ -129,18 +161,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserProps:
+    rotation: 0
+    size: {x: 0, y: 0}
+    offsetCenter: {x: 0, y: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
+    fogColor: {r: 0, g: 0, b: 0, a: 0}
     intensity: 0
-    flickering: 0
-    seed: 0
     useManualTime: 0
     manualTime: 0
     angle: 0
+    flickering: 0
     width: 0
     sharpness: 0
     xBlur: 0
     splitWidth: 0
     splitMix: 0
+    fog: 0
+    centerBloom: 0
+    centerBloomSize: 0
     rapidFire: 0
     rapidFireCount: 0
     rapidFireSpeed: 0
@@ -149,12 +187,10 @@ MonoBehaviour:
     rapidFireHold: 0
     rapidFireRelease: 0
     rapidFireRandomness: 0
+    seed: 0
     noiseIntensity: 0
     noiseScale: 0
     noiseSpeed: 0
-    fog: 0
-    centerBloom: 0
-    centerBloomSize: 0
     strobeSpeed: 0
     strobePWM: 0
     strobeTimeOffset: 0
