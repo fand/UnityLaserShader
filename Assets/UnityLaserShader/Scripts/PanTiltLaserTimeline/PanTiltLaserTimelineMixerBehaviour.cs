@@ -38,8 +38,8 @@ public class PanTiltLaserTimelineMixerBehaviour : PlayableBehaviour
             if (inputWeight > 0)
             {
                 // trackBinding.UpdateLaser(input.laserProps);
-                pan += input.pan * inputWeight;
-                tilt += input.tilt * inputWeight;
+                // pan += input.pan * inputWeight;
+                // tilt += input.tilt * inputWeight;
                 
                 laserProps.rotation += input.rotation * inputWeight;
                 laserProps.offsetCenter += input.offsetCenter * inputWeight;

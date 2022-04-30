@@ -75,7 +75,7 @@ Material:
     - _CullModeForward: 2
     - _DebugFogWidthSlider: 1
     - _DepthOffsetEnable: 0
-    - _DistanceFade: 0.498
+    - _DistanceFade: 0.5
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 1
     - _DoubleSidedNormalMode: 2

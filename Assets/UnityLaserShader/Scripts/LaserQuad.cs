@@ -40,6 +40,7 @@ public class LaserQuad : MonoBehaviour
         transform.localPosition = Vector3.up * laserProps.size.y / 2f;
         materialPropertyBlock.SetColor("_Color", laserProps.color);
         materialPropertyBlock.SetColor("_FogColor", laserProps.fogColor);
+        materialPropertyBlock.SetFloat("_DistanceFade", laserProps.distanceFade);
         materialPropertyBlock.SetFloat("_Intensity", laserProps.intensity);
         materialPropertyBlock.SetFloat("_Flickering", laserProps.flickering);
         materialPropertyBlock.SetFloat("_Seed", laserProps.seed);

@@ -31,13 +31,11 @@ public class PanTiltLaserGroupTimelineMixerBehaviour : PlayableBehaviour
         var tiltStep = 0f;
         var rotationStep = 0f;
         var laserProps = new LaserProps();
-        var laserColors = new List<LaserColor>();
-        for (int j = 0; j < trackBinding.laserColors.Count; j++)
+        var offsetChild = new List<OffsetPTLChildProp>();
+        for (int j = 0; j < trackBinding.LaserCount; j++)
         {
-            var lc = new LaserColor();
-            lc.color = new Color(0, 0, 0, 0);
-            lc.fogColor = new Color(0, 0, 0, 0);
-            laserColors.Add(lc);
+            var lc = new OffsetPTLChildProp( 0,0,0,new Color(0, 0, 0, 0), new Color(0, 0, 0, 0));
+            offsetChild.Add(lc);
         }
         int inputCount = playable.GetInputCount();
         for (int i = 0; i < inputCount; i++)
@@ -49,6 +47,8 @@ public class PanTiltLaserGroupTimelineMixerBehaviour : PlayableBehaviour
             if (inputWeight > 0)
             {
 
+                
+                trackBinding.ForceEnableLasers();
                 
                  // trackBinding.UpdateLaser(input.laserProps);
                 pan += input.pan * inputWeight;
@@ -66,18 +66,18 @@ public class PanTiltLaserGroupTimelineMixerBehaviour : PlayableBehaviour
                 var colorIndex= 0;
 
                 CheckColorList(input);
-                foreach (var c in laserColors)
+                foreach (var c in offsetChild)
                 {
-                    c.color += input.colors[colorIndex] * inputWeight;
+                    c.pan += input.OffsetPTLChildPropList[colorIndex].pan * inputWeight;
+                    c.tilt += input.OffsetPTLChildPropList[colorIndex].tilt * inputWeight;
+                    c.rotation += input.OffsetPTLChildPropList[colorIndex].rotation * inputWeight;
+                    
+                    c.color += input.OffsetPTLChildPropList[colorIndex].color * inputWeight;
                     c.color.a = 1;
-                    c.fogColor += input.fogColors[colorIndex] * inputWeight;
-                    c.fogColor.a = 1;
+                    c.fogColor += input.OffsetPTLChildPropList[colorIndex].fogColor * inputWeight;
                     colorIndex++;
                 }
-                // laserProps.color += input.color * inputWeight;
-                // laserProps.fogColor += input.fogColor * inputWeight;
-                // laserProps.intensity += input.intensity * inputWeight;
-            
+
                 laserProps.useManualTime = true;
                 if (playableDirector != null) laserProps.manualTime = (float)playableDirector.time;
                 
@@ -93,7 +93,7 @@ public class PanTiltLaserGroupTimelineMixerBehaviour : PlayableBehaviour
                 laserProps.fog += input.fog * inputWeight;
                 laserProps.centerBloom += input.centerBloom * inputWeight;
                 laserProps.centerBloomSize += input.centerBloomSize * inputWeight;
-                
+                laserProps.distanceFade += input.distanceFade * inputWeight;
                 
             
                 laserProps.rapidFire += input.rapidFire * inputWeight;
@@ -113,37 +113,46 @@ public class PanTiltLaserGroupTimelineMixerBehaviour : PlayableBehaviour
                 laserProps.strobeSpeed += input.strobeSpeed * inputWeight;
                 laserProps.strobePWM += input.strobePWM * inputWeight;
                 laserProps.strobeTimeOffset += input.strobeTimeOffset * inputWeight;
+                break;
+            }
+            else
+            {
+                // trackBinding.gameObject.SetActive(false);
+                trackBinding.ForceDisableLasers();
             }
         }
 
-        trackBinding.SetLaserProps(laserProps,laserColors);
+        
+        
+       
         trackBinding.panStep = panStep;
         trackBinding.tiltStep = tiltStep;
         trackBinding.rotationStep = rotationStep;
+        trackBinding.SetLaserProps(laserProps,offsetChild);
         trackBinding.ApplyValues();
-        trackBinding.SetPan(pan);
-        trackBinding.SetTilt(tilt);
+        trackBinding.SetPanTilt(pan,tilt);
+        
     }
 
     private void CheckColorList(PanTiltLaserTimelineBehaviour input)
     {
-        if (input.colors == null) input.colors = new List<Color>();
-        if (input.fogColors == null) input.fogColors = new List<Color>();
+        // if (input.colors == null) input.colors = new List<Color>();
+        // if (input.fogColors == null) input.fogColors = new List<Color>();
 
-        var diff = input.colors.Count - trackBinding.laserColors.Count;
+        var diff = input.OffsetPTLChildPropList.Count - trackBinding.LaserCount;
         var range = Math.Abs(diff);
         if (diff>0)
         {
             
-            input.colors.RemoveRange(input.colors.Count-range-1,range);
-            input.fogColors.RemoveRange(input.colors.Count-range-1,range);
+            input.OffsetPTLChildPropList.RemoveRange(input.OffsetPTLChildPropList.Count-range-1,range);
+            input.OffsetPTLChildPropList.RemoveRange(input.OffsetPTLChildPropList.Count-range-1,range);
             
         }
 
         if (diff < 0)
         {
-            input.colors.AddRange(new Color[range]);
-            input.fogColors.AddRange(new Color[range]);
+            input.OffsetPTLChildPropList.AddRange(new OffsetPTLChildProp[range]);
+            input.OffsetPTLChildPropList.AddRange(new OffsetPTLChildProp[range]);
         }
     }
 }

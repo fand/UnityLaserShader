@@ -11,8 +11,9 @@ public class LaserProps
 
     [Header("--- Color ---")]
     [ColorUsage(showAlpha: false, hdr: true)][SerializeField] public Color color = Color.green;
-    [ColorUsage(showAlpha: false, hdr: true)][SerializeField] public Color fogColor = Color.green;
+    [ColorUsage(showAlpha: true, hdr: true)][SerializeField] public Color fogColor = Color.green;
     [SerializeField, Range(0, 1)] public float intensity = 1f;
+    [SerializeField, Range(0,1)] public float distanceFade;
 
     [Header("--- Update Mode ---")]
     [SerializeField] public bool useManualTime = false;
@@ -62,7 +63,7 @@ public class LaserProps
         intensity = laserProps.intensity;
         useManualTime = laserProps.useManualTime;
         manualTime = laserProps.manualTime;
-       
+        distanceFade = laserProps.distanceFade;
         angle = laserProps.angle;
         flickering = laserProps.flickering;
         width = laserProps.width;
@@ -102,7 +103,7 @@ public class LaserProps
         intensity = 0f;
         useManualTime = false;
         manualTime = 0f;
-       
+        distanceFade = 0f;
         angle = 0f;
         flickering = 0f;
         width = 0f;
