@@ -40,6 +40,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_53b148924dee4006a55af50220b9c62f_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 410189f4cf181a04e90ca28b721d1ce9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -87,6 +91,7 @@ Material:
     - _FogBlendFactor: 0.172
     - _FogNoiseScale: 0.43
     - _Intensity: 0.639
+    - _LaserAngleMask: 45
     - _ManualTime: -2.44
     - _NoiseIntensity: 0
     - _NoiseScale: 500
