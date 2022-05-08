@@ -3,7 +3,7 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 [TrackColor(0.3339622f, 1f, 0.8672137f)]
-[TrackClipType(typeof(LaserFanClip))]
+[TrackClipType(typeof(LaserFanArrayClip))]
 [TrackBindingType(typeof(StylizedLaserArray))]
 public class LaserFanArrayTrack : TrackAsset
 {

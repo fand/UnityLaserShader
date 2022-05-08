@@ -42,10 +42,10 @@ public class LaserBasicProps:LaserPropElement
     [SerializeField, Range(0, 1)] public float strobePWM = 0.5f;
     [SerializeField, Range(0, 1)] public float strobeTimeOffset = 0f;
 
-    public LaserBasicProps()
+    public LaserBasicProps(bool allValueZero = false)
     {
         InitializeAllWithZero();
-        InitializeBasicValues();
+        if(!allValueZero)InitializeBasicValues();
     }
 
     public LaserBasicProps(LaserBasicProps laserBasicProps)

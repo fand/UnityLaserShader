@@ -11,6 +11,7 @@ public class StylizedLaser : LaserElement
     [SerializeField] List<StylizedLaser> synchronizedStylizedLasers = new List<StylizedLaser>();
     
 
+    
     public LaserType laserType { 
         get { return _laserType; } 
         set

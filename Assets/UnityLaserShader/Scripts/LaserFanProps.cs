@@ -85,10 +85,10 @@ public class LaserFanProps : LaserPropElement
         
     }
 
-    public LaserFanProps()
+    public LaserFanProps(bool allValueZero = false)
     {
         InitializeAllWithZero();
-        InitializeBasicValues();
+        if(!allValueZero)InitializeBasicValues();
         
     }
 
