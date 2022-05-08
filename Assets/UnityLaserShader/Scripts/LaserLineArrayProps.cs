@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class LaserLineArrayProps
+public class LaserLineArrayProps:LaserPropElement
 {
     
     [Header("--- Array ---")]
@@ -86,8 +86,9 @@ public class LaserLineArrayProps
         result.arrayRandomness *= b;
         return result;
     }
-    
-    public void Init()
+
+
+    public override void InitializeAllWithZero()
     {
 
         // array
@@ -103,12 +104,12 @@ public class LaserLineArrayProps
 
     public LaserLineArrayProps()
     {
-        Init();
-        SetBasicValues();
+        InitializeAllWithZero();
+        InitializeBasicValues();
         
     }
 
-    public void SetBasicValues()
+    public override void InitializeBasicValues()
     {
         arrayCount = 6;
         arrayMoveSpeed = 1f;

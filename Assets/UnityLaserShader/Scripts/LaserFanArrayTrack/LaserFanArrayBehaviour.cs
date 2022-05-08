@@ -4,27 +4,26 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 [Serializable]
-public class LaserLineArrayBehaviour : PlayableBehaviour
+public class LaserFanArrayBehaviour : PlayableBehaviour
 {
-
-    // public Vector2 v;
     [SerializeField]public LaserTransform laserTransform = new LaserTransform();
+    public float offsetPan = 0f;
+    public float offsetTilt = 0f;
+    public float offsetRotation = 0f;
     public LaserBasicProps laserBasicProps = new LaserBasicProps();
-    public LaserLineArrayProps laserLineArrayProps = new LaserLineArrayProps();
-    
+    public LaserFanProps laserFanProps = new LaserFanProps();
+
     public override void OnPlayableCreate (Playable playable)
     {
-
-        // SetBasicValues();
-        // laserLineArrayProps
+        
     }
-
+    
     public void SetBasicValues()
     {
         laserBasicProps.InitializeBasicValues();
-        
-        laserLineArrayProps.InitializeBasicValues();
-        
+        laserBasicProps.InitializeBasicValues();
+        laserFanProps.InitializeBasicValues();
+        laserFanProps.InitializeBasicValues();
         laserTransform.SetBasicValues();
     }
 }

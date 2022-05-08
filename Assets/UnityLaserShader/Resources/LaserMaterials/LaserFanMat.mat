@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1634180903642079032
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -20,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LaserLine
-  m_Shader: {fileID: -6465566751694194690, guid: 70f4b683429e78347a17cc49aa15c640, type: 3}
-  m_ShaderKeywords: _SURFACE_TYPE_TRANSPARENT
+  m_Name: LaserFanMat
+  m_Shader: {fileID: -6465566751694194690, guid: 27ba74bd13e9fdc47b20ff956ad73582, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -56,6 +43,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _LaserCompositeSubGraph_52f484465ff94bf1a4897ae6ed12de5a_Texture2D_996745106:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -73,10 +64,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_53b148924dee4006a55af50220b9c62f_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 410189f4cf181a04e90ca28b721d1ce9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_5ab7b2675d7c4d9fae2ac96cfef6bed5_Texture_1:
         m_Texture: {fileID: 2800000, guid: 410189f4cf181a04e90ca28b721d1ce9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -103,36 +90,33 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Angle: 32.9
+    - _Angle: 28.2
     - _ArrayCount: 5
     - _ArrayMoveAttack: 0
     - _ArrayMoveHold: 0.3
     - _ArrayMoveRelease: 0.1
     - _ArrayMoveSpeed: 1
-    - _ArrayMoveTimeOffset: 0.218
+    - _ArrayMoveTimeOffset: 0
     - _ArrayNoiseIntensity: 0
     - _ArrayNoiseScale: 500
     - _ArrayNoiseSeed: 0
     - _ArrayNoiseSpeed: 0.3
-    - _ArrayRandomSeed: 0
     - _ArrayRandomness: 0
     - _Blend: 0
     - _BumpScale: 1
     - _CastShadows: 1
-    - _CenterBloom: 0
-    - _CenterBloomSize: 0
+    - _CenterBloom: 2.26
+    - _CenterBloomSize: 0.237
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.5
-    - _DebugFogWidthSlider: 0
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistanceFade: 0.866
-    - _DstBlend: 10
+    - _DistanceFade: 0.1
+    - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _Flickering: 0
-    - _FogBlendFactor: 0.001
     - _FogNoiseScale: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -140,51 +124,51 @@ Material:
     - _LaserAngleMask: 45
     - _ManualTime: 0
     - _Metallic: 0
-    - _NoiseIntensity: 0
-    - _NoiseScale: 210
-    - _NoiseSpeed: 0.3
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RapidFireAttack: 0.32
-    - _RapidFireCount: 8.61
-    - _RapidFireHold: 0.405
-    - _RapidFireRandomness: 0
-    - _RapidFireRelease: 0.428
-    - _RapidFireSpeed: 0
-    - _RapidFireTimeOffset: 0.134
-    - _RapidRandomSeed: 0
-    - _Rapidfiire: 0
     - _ReceiveShadows: 1
-    - _Rotation: 0
-    - _Seed: 0
-    - _Sharpness: 2.28
+    - _Rotation: 0.18
+    - _Sharpness: 3
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SplitMix: 0.4
-    - _SplitWidth: 0.135
-    - _SrcBlend: 5
-    - _StrobePWM: 0
+    - _SplitMix: 0
+    - _SplitWidth: 0
+    - _SrcBlend: 1
+    - _StrobePWM: 0.5
     - _StrobeSpeed: 0
     - _StrobeTimeOffset: 0
-    - _Surface: 1
+    - _Surface: 0
     - _UseManualTime: 0
-    - _Width: 0.144
+    - _Width: 0.5
     - _WorkflowMode: 1
-    - _XBlur: 0.172
+    - _XBlur: 0.51
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - _AngleMaskStartEnd: {r: -45, g: 45, b: 0, a: 0}
-    - _ArcMaskStartEnd: {r: -45, g: 45, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 7.129739, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FogColor: {r: 0, g: 1, b: 0, a: 0}
+    - _FogColor: {r: 0.1924528, g: 1, b: 0.1924528, a: 1}
+    - _FogNoiseSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _OffsetCenter: {r: 0.5, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &3467187178647545617
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

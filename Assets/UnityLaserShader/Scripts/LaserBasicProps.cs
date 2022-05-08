@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class LaserBasicProps
+public class LaserBasicProps:LaserPropElement
 {
     
     [Header("--- Transform ----")]
@@ -44,8 +44,8 @@ public class LaserBasicProps
 
     public LaserBasicProps()
     {
-        Init();
-        SetBasicValues();
+        InitializeAllWithZero();
+        InitializeBasicValues();
     }
 
     public LaserBasicProps(LaserBasicProps laserBasicProps)
@@ -203,7 +203,7 @@ public class LaserBasicProps
         return result;
     }
     
-    public void Init()
+    public override void InitializeAllWithZero()
     {
         // transform
         rotation = 0f;
@@ -242,7 +242,7 @@ public class LaserBasicProps
         strobeTimeOffset = 0f;
     }
 
-    public void SetBasicValues()
+    public override void InitializeBasicValues()
     {
         offsetCenter = new Vector2(0.5f, 0f);
         opacity = 1f;
