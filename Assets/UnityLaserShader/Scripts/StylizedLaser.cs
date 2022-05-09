@@ -65,7 +65,7 @@ public class StylizedLaser : LaserElement
         {
             foreach (StylizedLaser ptl in synchronizedStylizedLasers)
             {
-                ptl.SetBasicProps(laserBasicProps);
+               if(ptl != null) ptl.SetBasicProps(laserBasicProps);
             }
         }
 
@@ -78,7 +78,7 @@ public class StylizedLaser : LaserElement
         {
             foreach (StylizedLaser ptl in synchronizedStylizedLasers)
             {
-                ptl.SetLineArrayProps(laserLineArrayProps);
+                if(ptl != null)ptl.SetLineArrayProps(laserLineArrayProps);
             }
         }
 
@@ -90,7 +90,7 @@ public class StylizedLaser : LaserElement
         {
             foreach (StylizedLaser ptl in synchronizedStylizedLasers)
             {
-                ptl.SetFanProps(laserFanProps);
+                if(ptl != null)ptl.SetFanProps(laserFanProps);
             }
         }
     }
@@ -104,7 +104,8 @@ public class StylizedLaser : LaserElement
         {
             foreach (StylizedLaser ptl in synchronizedStylizedLasers)
             {
-                ptl.SetLaserTransform(laserTransform);
+                
+                if(ptl != null)ptl.SetLaserTransform(laserTransform);
             }
         }
     }
@@ -138,6 +139,7 @@ public class StylizedLaser : LaserElement
 
         foreach (var synchronizedStylizedLaser in synchronizedStylizedLasers)
         {
+            if(synchronizedStylizedLaser == null) return;
             synchronizedStylizedLaser.laserType = laserType;
             synchronizedStylizedLaser.SetLaserTransform(laserTransform);
             synchronizedStylizedLaser.SetBasicProps(laserBasicProps);

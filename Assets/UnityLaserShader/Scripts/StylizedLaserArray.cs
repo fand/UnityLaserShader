@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -26,6 +27,11 @@ public class StylizedLaserArray : LaserElement
         }
     }
 
+
+    private void Start()
+    {
+        Init(this.laserType);
+    }
 
     [MenuItem("InitType")]
     public override void InitType(LaserType laserType)
@@ -88,6 +94,7 @@ public class StylizedLaserArray : LaserElement
         }
         
     }
+    
 
 
     // Update is called once per frame
@@ -98,6 +105,7 @@ public class StylizedLaserArray : LaserElement
         // if (_staggerLaserTransformArray.Count != laserArray.Count) Init(laserType);
         foreach (var laser in laserArray)
         {
+            if(laser == null) return;
             laser.laserType = LaserType.Fan;
             var index = laserArray.IndexOf(laser);
             var copyLaserTransform = laserTransform + staggerLaserTransform*index;   //_staggerLaserTransformArray[index];
