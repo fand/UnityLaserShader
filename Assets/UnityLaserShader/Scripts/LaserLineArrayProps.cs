@@ -102,10 +102,10 @@ public class LaserLineArrayProps:LaserPropElement
         
     }
 
-    public LaserLineArrayProps()
+    public LaserLineArrayProps(bool initializeAllWithZero = false)
     {
         InitializeAllWithZero();
-        InitializeBasicValues();
+        if(!initializeAllWithZero)InitializeBasicValues();
         
     }
 

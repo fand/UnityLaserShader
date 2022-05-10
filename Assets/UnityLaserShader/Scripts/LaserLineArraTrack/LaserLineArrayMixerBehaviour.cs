@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-public class LaserFanArrayMixerBehaviour : PlayableBehaviour
+public class LaserLineArrayMixerBehaviour : PlayableBehaviour
 {
     private PlayableDirector _director;
     public PlayableDirector director
@@ -14,9 +14,6 @@ public class LaserFanArrayMixerBehaviour : PlayableBehaviour
         get { return _director; }
         set { _director = value; }
     }
-
-    public List<TimelineClip> clips;
-
 
     private StylizedLaserArray trackBinding;
     // NOTE: This function is called at runtime and edit time.  Keep that in mind when setting the values of properties.
@@ -29,20 +26,20 @@ public class LaserFanArrayMixerBehaviour : PlayableBehaviour
         if (!trackBinding)
             return;
         
-        trackBinding.laserType = LaserType.Fan;
+        trackBinding.laserType = LaserType.LineArray;
       
         int inputCount = playable.GetInputCount ();
         
         var laserBasicProps = new LaserBasicProps(true);
-        var laserFanProps = new LaserFanProps(true);
+        var laserLineArrayProps = new LaserLineArrayProps(true);
         var laserTransform = new LaserTransform();
         
         var staggerLaserBasicProps = new LaserBasicProps(true);
-        var staggerLaserFanProps = new LaserFanProps(true);
+        var staggerlaserLineArrayProps = new LaserLineArrayProps(true);
         var staggerLaserTransform = new LaserTransform();
         
         laserBasicProps.InitializeAllWithZero();
-        laserFanProps.InitializeAllWithZero();
+        laserLineArrayProps.InitializeAllWithZero();
 
         var lineColors = new List<Color>();
         var fogColors = new List<Color>();
@@ -56,57 +53,40 @@ public class LaserFanArrayMixerBehaviour : PlayableBehaviour
         {
             fogColors.Add(new Color(0,0,0,0));
         }
-        var currentInputs = new List<LaserFanArrayBehaviour>();
+        var currentInputs = new List<LaserLineArrayBehaviour>();
 
-        if(clips == null) return;
-        // var isGradient = false;
         for (int i = 0; i < inputCount; i++)
         {
             float inputWeight = playable.GetInputWeight(i);
-            ScriptPlayable<LaserFanArrayBehaviour> inputPlayable = (ScriptPlayable<LaserFanArrayBehaviour>)playable.GetInput(i);
-            LaserFanArrayBehaviour input = inputPlayable.GetBehaviour ();
+            ScriptPlayable<LaserLineArrayBehaviour> inputPlayable = (ScriptPlayable<LaserLineArrayBehaviour>)playable.GetInput(i);
+            LaserLineArrayBehaviour input = inputPlayable.GetBehaviour ();
 
 
 
             if (inputWeight > 0.0f)
             {
                 CheckColorList(input);
-                if (input.useGradient)
+                for (int li = 0; li < lineColors.Count; li++)
                 {
-                    var color = input.gradientColor.Evaluate(Mathf.Clamp( (float)((director.time-clips[i].start) / clips[i].duration),0f,1f));
-                    for (int li = 0; li < lineColors.Count; li++)
-                    {
-                        lineColors[li] +=color * inputWeight;
-                            
-                    }
-                    for (int fi = 0; fi < fogColors.Count; fi++)
-                    {
-                        fogColors[fi] +=color * inputWeight;
-                    }
-                }else
-                {
-                    for (int li = 0; li < lineColors.Count; li++)
-                    {
-                        
-                        lineColors[li] += input.lineColors[li] * inputWeight;
-                    }
-                    for (int fi = 0; fi < fogColors.Count; fi++)
-                    {
-                        fogColors[fi] += input.fogColors[fi] * inputWeight;
-                    }
+                    lineColors[li] += input.lineColors[li] * inputWeight;
                 }
+                
+                for (int fi = 0; fi < fogColors.Count; fi++)
+                {
+                    fogColors[fi] += input.fogColors[fi] * inputWeight;
+                }
+            
+
                 laserBasicProps += input.laserBasicProps * inputWeight;
-                laserFanProps += input.laserFanProps * inputWeight;
+                laserLineArrayProps += input.laserLinArrayProps * inputWeight;
                 laserTransform += input.laserTransform * inputWeight;
                 
                 staggerLaserBasicProps += input.staggerLaserBasicProps * inputWeight;
-                staggerLaserFanProps += input.staggerLaserFanProps * inputWeight;
+                staggerlaserLineArrayProps += input.staggerLaserLinArrayProps * inputWeight;
                 staggerLaserTransform += input.staggerLaserTransform * inputWeight;
              
                 currentInputs.Add(input);
-                // isGradient = input.useGradient;
-
-               
+                
             }
             
         }
@@ -116,21 +96,19 @@ public class LaserFanArrayMixerBehaviour : PlayableBehaviour
         laserBasicProps.manualTime = (float)director.time;
         
         trackBinding.staggerLaserProps = staggerLaserBasicProps;
-        trackBinding.staggerLaserFanProps = staggerLaserFanProps;
+        trackBinding.staggerLaserLineArrayProps = staggerlaserLineArrayProps;
         trackBinding.staggerLaserTransform = staggerLaserTransform;
-        
-        
         
         trackBinding.lineColors = lineColors;
         trackBinding.fogColors = fogColors;
         
         trackBinding.SetLaserTransform(laserTransform);
         trackBinding.SetBasicProps(laserBasicProps);
-        trackBinding.SetFanProps(laserFanProps);
+        trackBinding.SetLineArrayProps(laserLineArrayProps);
 
     }
     
-    private void CheckColorList(LaserFanArrayBehaviour input)
+    private void CheckColorList(LaserLineArrayBehaviour input)
     {
         // if (input.colors == null) input.colors = new List<Color>();
         // if (input.fogColors == null) input.fogColors = new List<Color>();

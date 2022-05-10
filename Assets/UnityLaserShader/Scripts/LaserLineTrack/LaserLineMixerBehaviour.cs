@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-public class LaserLineArrayMixerBehaviour : PlayableBehaviour
+public class LaserLineMixerBehaviour : PlayableBehaviour
 {
     
     private PlayableDirector _director;
@@ -32,12 +32,12 @@ public class LaserLineArrayMixerBehaviour : PlayableBehaviour
         
         laserBasicProps.InitializeAllWithZero();
         laserLineArrayProps.InitializeAllWithZero();
-        var currentInputs = new List<LaserLineArrayBehaviour>();
+        var currentInputs = new List<LaserLineBehaviour>();
         for (int i = 0; i < inputCount; i++)
         {
             float inputWeight = playable.GetInputWeight(i);
-            ScriptPlayable<LaserLineArrayBehaviour> inputPlayable = (ScriptPlayable<LaserLineArrayBehaviour>)playable.GetInput(i);
-            LaserLineArrayBehaviour input = inputPlayable.GetBehaviour ();
+            ScriptPlayable<LaserLineBehaviour> inputPlayable = (ScriptPlayable<LaserLineBehaviour>)playable.GetInput(i);
+            LaserLineBehaviour input = inputPlayable.GetBehaviour ();
 
 
           

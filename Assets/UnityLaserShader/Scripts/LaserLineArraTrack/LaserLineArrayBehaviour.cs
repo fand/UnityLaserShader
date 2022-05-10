@@ -5,13 +5,13 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 [Serializable]
-public class LaserFanArrayBehaviour : PlayableBehaviour
+public class LaserLineArrayBehaviour : PlayableBehaviour
 {
     
     [Header("--- Base Settings ---")]
     public LaserTransform laserTransform = new LaserTransform();
     public LaserBasicProps laserBasicProps = new LaserBasicProps();
-    public LaserFanProps laserFanProps = new LaserFanProps();
+    public LaserLineArrayProps laserLinArrayProps = new LaserLineArrayProps();
 
     [Header("--- Stagger Settings ---")]
     [ColorUsage(showAlpha: false, hdr: true)]public List<Color> lineColors = new List<Color>(){Color.white};
@@ -19,11 +19,8 @@ public class LaserFanArrayBehaviour : PlayableBehaviour
 
     public LaserTransform staggerLaserTransform = new LaserTransform(){pan = 0f,tilt=0f,size = Vector2.zero};
     public LaserBasicProps staggerLaserBasicProps = new LaserBasicProps(true);
-    public LaserFanProps staggerLaserFanProps = new LaserFanProps(true);
+    public LaserLineArrayProps staggerLaserLinArrayProps = new LaserLineArrayProps(true);
 
-
-    public bool useGradient = false;
-    [GradientUsage(true)]public Gradient gradientColor;
     public override void OnPlayableCreate (Playable playable)
     {
         
@@ -33,8 +30,8 @@ public class LaserFanArrayBehaviour : PlayableBehaviour
     {
         laserBasicProps.InitializeBasicValues();
         laserBasicProps.InitializeBasicValues();
-        laserFanProps.InitializeBasicValues();
-        laserFanProps.InitializeBasicValues();
+        laserLinArrayProps.InitializeBasicValues();
+        laserLinArrayProps.InitializeBasicValues();
         laserTransform.SetBasicValues();
     }
 }

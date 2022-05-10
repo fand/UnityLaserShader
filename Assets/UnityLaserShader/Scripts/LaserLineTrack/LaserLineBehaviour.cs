@@ -4,7 +4,7 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 [Serializable]
-public class LaserLineArrayBehaviour : PlayableBehaviour
+public class LaserLineBehaviour : PlayableBehaviour
 {
 
     // public Vector2 v;

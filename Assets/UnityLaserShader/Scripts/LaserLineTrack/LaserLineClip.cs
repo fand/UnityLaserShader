@@ -4,9 +4,9 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 [Serializable]
-public class LaserLineArrayClip : PlayableAsset, ITimelineClipAsset
+public class LaserLineClip : PlayableAsset, ITimelineClipAsset
 {
-    public LaserLineArrayBehaviour template = new LaserLineArrayBehaviour ();
+    public LaserLineBehaviour template = new LaserLineBehaviour ();
 
     public ClipCaps clipCaps
     {
@@ -15,8 +15,8 @@ public class LaserLineArrayClip : PlayableAsset, ITimelineClipAsset
 
     public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
     {
-        var playable = ScriptPlayable<LaserLineArrayBehaviour>.Create (graph, template);
-        LaserLineArrayBehaviour clone = playable.GetBehaviour ();
+        var playable = ScriptPlayable<LaserLineBehaviour>.Create (graph, template);
+        LaserLineBehaviour clone = playable.GetBehaviour ();
         // template.SetBasicValues();
         return playable;
     }

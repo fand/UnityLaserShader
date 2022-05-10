@@ -37,27 +37,27 @@ public class LaserTransform
     public static LaserTransform operator +(LaserTransform a, LaserTransform b)
     {
         LaserTransform c = new LaserTransform(a);
-        c.pan += b.pan;
-        c.tilt += b.tilt;
-        c.size += b.size;
+        c.pan = a.pan+b.pan;
+        c.tilt =a.tilt+ b.tilt;
+        c.size = a.size+ b.size;
         return c;
     }
 
     public static LaserTransform operator -(LaserTransform a, LaserTransform b)
     {
         LaserTransform c = new LaserTransform(a);
-        c.pan -= b.pan;
-        c.tilt -= b.tilt;
-        c.size -= b.size;
+        c.pan = a.pan-b.pan;
+        c.tilt =a.tilt- b.tilt;
+        c.size =a.size- b.size;
         return c;
     }
 
     public static LaserTransform operator *(LaserTransform a, LaserTransform b)
     {
         LaserTransform c = new LaserTransform(a);
-        c.pan *= b.pan;
-        c.tilt *= b.tilt;
-        c.size *= b.size;
+        c.pan = a.pan*b.pan;
+        c.tilt = a.tilt*b.tilt;
+        c.size = a.size* b.size;
         return c;
     }
 
@@ -73,9 +73,9 @@ public class LaserTransform
     public static LaserTransform operator /(LaserTransform a, LaserTransform b)
     {
         LaserTransform c = new LaserTransform(a);
-        c.pan /= b.pan;
-        c.tilt /= b.tilt;
-        c.size /= b.size;
+        c.pan = a.pan/b.pan;
+        c.tilt = a.tilt/b.tilt;
+        c.size = a.size/b.size;
         return c;
     }
     
